@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第二章：稻妻·千手百眼，天下人间</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo/favicon32x32.png">
-    <link rel="stylesheet" href="../../styles.css">
-</head>
-<body>
-    <header class="topbar">
-        <div class="topbar-left" onclick="window.location.href='../../main.html'">
-            <img src="../../img/logo/genshinlogo.webp" alt="原神 Logo" class="logo">
-            <span class="site-title">世界观手册</span>
-        </div>
-        <nav class="nav-menu">
-            <div class="nav-indicator"></div>
-            <ul class="nav-list">
-                <li class="nav-item" data-index="0">
-                    <a href="../../main.html" data-nav="home">首页</a>
-                </li>
-                <li class="nav-item" data-index="1">
-                    <a href="../../preface.html" data-nav="preface">前言</a>
-                </li>
-                <li class="nav-item" data-index="2">
-                    <a href="../../basiclore.html" data-nav="basic">基本设定</a>
-                </li>
-                <li class="nav-item" data-index="3">
-                    <a href="../../Teyvathis.html" data-nav="history">提瓦特历史</a>
-                </li>
-                <li class="nav-item active" data-index="4">
-                    <a href="../../history-country.html" data-nav="nations">各国历史</a>
-                </li>
-                <li class="nav-item" data-index="5">
-                    <a href="../../genshinbasichis.html" data-nav="brief">时间线</a>
-                </li>
-                <li class="nav-item" data-index="6">
-                    <a href="../../about.html" data-nav="about-manual">关于手册</a>
-                </li>
-                <li class="nav-item" data-index="7">
-                    <a href="../../aboutsite.html" data-nav="about-site">关于本站</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content">
-        <aside class="toc-wrapper">
-            <aside class="toc-sidebar">
-                <h3 class="toc-title">目录导航 <button class="toc-collapse-btn" id="toc-collapse">→</button></h3>
-                <ul class="toc-list" id="toc-list"></ul>
-            </aside>
-            <button class="toc-expand-btn" id="toc-expand">☰</button>
-        </aside>
 
-        <section class="page-content">
-            <h1 class="page-title" id="page-title">稻妻</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="本文全面梳理《原神》稻妻地区从雷龙时代、白夜国文明、魔神战争，到雷电真与狐斋宫等人对抗漆黑灾祸，再到雷电影追求永恒、创造人偶与雷电五传兴衰的宏大历史。详述海祇大御神东侵、踏鞴砂事件、散兵悲剧及三奉行格局，呈现稻妻在永恒与变迁中的命运轮回。">
+        <meta name="keywords" content="原神,稻妻,千手百眼天下人间,雷龙时代,月宫与葬火,前鹤观文明,鹤观,月神,樱之庭,夷斯古城,德尔斐·皮托,鸣神时代,白夜国,渊下宫,大日御舆,赫利俄斯,常世大神,卡伊洛斯,露塔斯伊,阿倍良久,太阳之子,斯巴达克,须婆达,归日之祭,雷鸟,雷音权现,阿瑠,魔神战争,雷电真,雷电影,奥罗巴斯,海祇大御神,远吕羽氏尊,海祇岛,珊瑚宫,现人神巫女,曚云,菖蒲,东山王,恶王,巨鲸大检校,笹百合,祟神,八酝岛,雷电将军,狐斋宫,八重神子,有乐斋,五百藏,御舆千代,虎千代,御舆道启,岩藏流,岩藏道启,光代,灵善坊,昆布丸,雾切高岭,浅濑响,赤穗百目鬼,惟神晴之介,梦见月瑞希,食梦貘,百鬼夜行,漆黑灾祸,坎瑞亚,深渊,一心净土,神之心,梦想一心,倾奇者,国崩,散兵,雷电五传,天目,经津,一心传,丹羽久秀,丹羽长光,枫原义庆,经津实,经津政芳,赤目实长,赤目兼长,枫原万叶,踏鞴砂事件,博士,丑角,愚人众,三奉行,勘定奉行,天领奉行,社奉行,柊弘嗣,九条孝行,九条裟罗,神里绫人,神里绫华,托马,笼钓瓶一心,雾切之回光,飞雷之弦振,薙草之稻光,证誓之明瞳,有乐御簾切,永恒,锁国令,日月前事,珊瑚宫记">
+        <meta property="og:title" content="第二章：稻妻·千手百眼，天下人间">
+        <meta property="og:description" content="本文全面梳理《原神》稻妻地区从雷龙时代、白夜国文明、魔神战争，到雷电真与狐斋宫等人对抗漆黑灾祸，再到雷电影追求永恒、创造人偶与雷电五传兴衰的宏大历史。详述海祇大御神东侵、踏鞴砂事件、散兵悲剧及三奉行格局，呈现稻妻在永恒与变迁中的命运轮回。">
+        <meta property="og:image" content="https://genshinlore.cn/img/og.png">
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://genshinlore.cn/his/Inazuma/base">
+        <meta property="og:type" content="article">
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="第二章：稻妻·千手百眼，天下人间"/>
+        <meta name="twitter:description" content="本文全面梳理《原神》稻妻地区从雷龙时代、白夜国文明、魔神战争，到雷电真与狐斋宫等人对抗漆黑灾祸，再到雷电影追求永恒、创造人偶与雷电五传兴衰的宏大历史。详述海祇大御神东侵、踏鞴砂事件、散兵悲剧及三奉行格局，呈现稻妻在永恒与变迁中的命运轮回。"/>
+        <meta name="twitter:image" content="https://genshinlore.cn/img/og.png"/>
+        <title>第二章：稻妻·千手百眼，天下人间 - 日月全事</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo/favicon32x32.png">
+        <link rel="stylesheet" href="../../styles.css">
+        <link rel="canonical" href="https://genshinlore.cn/his/Inazuma/base.html">
+    </head>
 
-            <div class="timeline-intro" id="timeline-intro"></div>
-            <div class="timeline" id="timeline"></div>
-        </section>
-    </main>
-
-    <footer class="home-footer">
-        <p>愿风指引你们的道路</p>
-        <p><a href="https://github.com/Dennis114514/GenshinLore" target="_blank">GenshinLore</a> 2026</p>
-        <p><a href="https://icp.gov.moe/?keyword=20263347" target="_blank">萌ICP备20263347号</a></p>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>原文</h3>
-                <button id="close-modal" class="close-button">&times;</button>
+    <body>
+        <header class="topbar">
+            <div class="topbar-left" onclick="window.location.href='../../main.html'">
+                <img src="../../img/logo/genshinlogo.webp" alt="原神 Logo" class="logo">
+                <span class="site-title">世界观手册</span>
             </div>
-            <div class="modal-body" id="modal-body"></div>
-        </div>
-    </div>
+            <nav class="nav-menu">
+                <div class="nav-indicator"></div>
+                <ul class="nav-list">
+                    <li class="nav-item" data-index="0">
+                        <a href="../../main.html" data-nav="home">首页</a>
+                    </li>
+                    <li class="nav-item" data-index="1">
+                        <a href="../../preface.html" data-nav="preface">前言</a>
+                    </li>
+                    <li class="nav-item" data-index="2">
+                        <a href="../../basiclore.html" data-nav="basic">基本设定</a>
+                    </li>
+                    <li class="nav-item" data-index="3">
+                        <a href="../../Teyvathis.html" data-nav="history">提瓦特历史</a>
+                    </li>
+                    <li class="nav-item active" data-index="4">
+                        <a href="../../history-country.html" data-nav="nations">各国历史</a>
+                    </li>
+                    <li class="nav-item" data-index="5">
+                        <a href="../../genshinbasichis.html" data-nav="brief">时间线</a>
+                    </li>
+                    <li class="nav-item" data-index="6">
+                        <a href="../../about.html" data-nav="about-manual">关于手册</a>
+                    </li>
+                    <li class="nav-item" data-index="7">
+                        <a href="../../aboutsite.html" data-nav="about-site">关于本站</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            <aside class="toc-wrapper">
+                <aside class="toc-sidebar">
+                    <h3 class="toc-title">目录导航 <button class="toc-collapse-btn" id="toc-collapse">→</button></h3>
+                    <ul class="toc-list" id="toc-list"></ul>
+                </aside>
+                <button class="toc-expand-btn" id="toc-expand">☰</button>
+            </aside>
 
-    <script src="../../script.js"></script>
-    <script src="content.js"></script>
-    <script src="../../useragreement.js"></script>
-    <script src="../../notice.js"></script>
-</body>
+            <section class="page-content">
+                <h1 class="page-title" id="page-title">稻妻</h1>
+
+                <div class="timeline-intro" id="timeline-intro"></div>
+                <div class="timeline" id="timeline"></div>
+            </section>
+        </main>
+
+        <footer class="home-footer">
+            <p>愿风指引你们的道路</p>
+            <p><a href="https://github.com/Dennis114514/GenshinLore" target="_blank">GenshinLore</a> 2026</p>
+            <p><a href="https://icp.gov.moe/?keyword=20263347" target="_blank">萌ICP备20263347号</a></p>
+        </footer>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>原文</h3>
+                    <button id="close-modal" class="close-button">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body"></div>
+            </div>
+        </div>
+
+        <script src="../../script.js"></script>
+        <script src="content.js"></script>
+        <script src="../../useragreement.js"></script>
+        <script src="../../notice.js"></script>
+    </body>
+
 </html>
